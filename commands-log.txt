@@ -1,0 +1,18 @@
+
+$ mkdir bookstore
+$ cd bookstore/
+$ mkdir api
+$ touch commands-log.txt
+Commit..
+
+$ cd api/
+$ npm init
+$ npm i -s express body-parser mongoose
+$ touch .gitignore
+$ touch app.js
+$ mkdir models
+$ mkdir client
+Commit..
+
+$ ng new bookstore --directory client_src
+Commit..
