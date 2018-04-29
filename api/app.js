@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
+// Special Thanks to: Traversy Media
+// Source: https://github.com/bradtraversy/bookstore
 // app.use(express.static(__dirname+'/client'));
 app.use(bodyParser.json());
 
@@ -46,5 +48,24 @@ app.get('/api/books/:_id', (req, res) => {
 	});
 });
 
+app.post('/api/genres', (req, res) => {
+	var genre = req.body;
+	Genre.addGenre(genre, (err, genre) => {
+		if(err){
+			throw err;
+		}
+		res.json(genre);
+	});
+});
+
+app.post('/api/books', (req, res) => {
+	var book = req.body;
+	Book.addBook(book, (err, book) => {
+		if(err){
+			throw err;
+		}
+		res.json(book);
+	});
+});
 app.listen(3000);
 console.log('A true lord, fit to link the fire.');

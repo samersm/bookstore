@@ -7,7 +7,8 @@ Commit..
 
 $ cd api/
 $ npm init
-$ npm i -s express body-parser mongoose nodemon
+$ npm i -s express body-parser mongoose
+$ npm install --save-dev nodemon
 $ touch .gitignore
 $ touch app.js
 $ mkdir models
