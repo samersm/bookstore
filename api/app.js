@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
 	res.send('Ashen one, hearest thou my voice, still?');
 });
 
+// Method Get
 app.get('/api/genres', (req, res) => {
 	Genre.getGenres((err, genres) => {
 		if(err){
@@ -48,6 +49,7 @@ app.get('/api/books/:_id', (req, res) => {
 	});
 });
 
+// Method Post
 app.post('/api/genres', (req, res) => {
 	var genre = req.body;
 	Genre.addGenre(genre, (err, genre) => {
@@ -67,5 +69,6 @@ app.post('/api/books', (req, res) => {
 		res.json(book);
 	});
 });
+
 app.listen(3000);
 console.log('A true lord, fit to link the fire.');
