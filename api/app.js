@@ -93,5 +93,26 @@ app.put('/api/books/:_id', (req, res) => {
 	});
 });
 
+// Method Delete
+app.delete('/api/genres/:_id', (req, res) => {
+	var id = req.params._id;
+	Genre.removeGenre(id, (err, genre) => {
+		if(err){
+			throw err;
+		}
+		res.json(genre);
+	});
+});
+
+app.delete('/api/books/:_id', (req, res) => {
+	var id = req.params._id;
+	Book.removeBook(id, (err, book) => {
+		if(err){
+			throw err;
+		}
+		res.json(book);
+	});
+});
+
 app.listen(3000);
 console.log('A true lord, fit to link the fire.');
