@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -29,7 +29,7 @@ import { BookService } from './services/book.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
