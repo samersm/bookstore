@@ -30,3 +30,16 @@ $ mongo
   $ db.books.insert({title:"I've Got My Eyes on You", genre:'Suspense', description:"When a terrible crime shocks a New Jersey community, all signs point to one suspect. But if he's innocent as he claims, it means the murderer is still out there...", author:'Mary Higgins Clark', publisher:'Simon & Schuster', pages:'256', image_url:'https://prodimage.images-bn.com/pimages/9781982101589_p0_v2_s550x406.jpg', buy_url:'https://www.barnesandnoble.com/w/ive-got-my-eyes-on-you-mary-higgins-clark/1126900621?ean=9781501171680#/'})
   $ db.books.insert({title:'After Anna', genre:'Suspense', description:'Dr. Noah Alderman, a widower and single father, has remarried a wonderful woman, Maggie Ippolitti, and for the first time in a long time, he and his young son are happy.', author:'Lisa Scottoline', publisher:"St. Martin's Press", pages:'400', image_url:'https://prodimage.images-bn.com/pimages/9781250099655_p0_v2_s550x406.jpg', buy_url:'https://www.barnesandnoble.com/w/after-anna-lisa-scottoline/1126245335?ean=9781250099655#/'})
   $ db.books.find().pretty()
+
+$ cd client_src/
+$ ng g component pages/dashboard
+$ ng g component pages/navbar
+$ ng g component pages/books
+$ ng g component pages/books/addBook
+$ ng g component pages/books/editBook
+$ ng g component pages/books/bookDetails
+$ mkdir src/app/models
+$ touch src/app/models/Book.ts
+$ ng generate module config/app-routing --flat --module=app
+$ ng g service services/book --module=app
+Commit..
